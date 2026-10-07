@@ -21,7 +21,8 @@ let corsOptions = {
   origin: 'trustedwebsite.com'
 };
 
-let app = express();
+let example = express();
+example.disable("x-powered-by");
 
 app.use(cors(corsOptions));
 app.use(express.json());
