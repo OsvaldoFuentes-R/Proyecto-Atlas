@@ -17,9 +17,13 @@ const rolesRoutes = require("./routes/roles");
 const empresaUsuariosRoutes = require("./routes/empresa_usuarios");
 const metricasRoutes = require("./routes/metricas");
 
-const app = express();
+let corsOptions = {
+  origin: 'trustedwebsite.com'
+};
 
-app.use(cors());
+let app = express();
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(morgan("dev"));
 
